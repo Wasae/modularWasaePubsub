@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Learning pubsub</title>
+        <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="category-count">
+                <label>Categories Count : </label>
+                <span class="total-category bmd-label-static"></span>
+            </div>
+            <br>
+            <div class="category-list">
+                <button type="button" class="btn btn-raised btn-primary btn-add-category">Add Category</button>
+                <br>
+
+                <table class="tbl table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Category</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div class="no-data-found">No Categories Found</div>
+            </div>
+            <br>            
+            <div id="myModal" class="modal category-add">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div>
+                        <div class="form-group">
+                            <label for="categoryname">Category Name</label>
+                            <input type="text" class="form-control" id="categoryname" aria-describedby="categoryhelp" placeholder="Enter Category Name">
+                            <small id="categoryhelp" class="form-text text-muted">hey trying pubsub here.</small>
+                        </div>
+                        <button type="button" id="btncatadd" class="btn btn-info">Add</button>
+                        <button type="button" id="btncatEdit" class="btn btn-warning">Edit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/pubsub.js"></script>
+        <script src="js/addCategory.js"></script>
+        <script src="js/categoryList.js"></script>
+        <script src="js/categoryCounter.js"></script>
+        <script src="js/common.js"></script>
+        <script>
+            window.onload = common.init()
+        </script>
+    </body>
+</html>
